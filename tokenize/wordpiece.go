@@ -49,7 +49,9 @@ func (wp Wordpiece) Tokenize(text string) []string {
 				break
 			}
 			toks = append(toks, sub)
+			fmt.Println("1----",tok)
 			tok = fmt.Sprintf("##%s", tok[len(sub):])
+			fmt.Println("2----",tok)
 		}
 	}
 	return toks
